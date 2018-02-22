@@ -1,0 +1,70 @@
+.buttons
+{
+-fx-background-color: 
+        #009fe3,
+        linear-gradient(#7ebcea, #009fe3),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#009fe3, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+.root
+{
+    -fx-background-image: url("images/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
+.Anchorpane
+{
+    -fx-background-color: #009fe3;
+    -fx-background-radius: 15 15 75 15;
+    -fx-border-radius: 15 15 75 15;
+}
+.Label 
+{
+    -fx-font-size: 16px;
+    -fx-font-weight: bolder;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+    -fx-alignment: center ;
+    -fx-padding: 10 ;
+}
+.table-view 
+{
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+}
+
+.table-view .column-header-background 
+{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler 
+{
+    -fx-size: 15;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+}
+
+.table-view .column-header .label 
+{
+    -fx-font-size: 12pt;
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected 
+{
+    -fx-background-color: -fx-focus-color;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="600.0" prefWidth="460.0" styleClass="root" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attauto.GUI.Controller.LoginController">
+   <children>
+      <AnchorPane layoutX="57.0" layoutY="179.0" prefHeight="300.0" prefWidth="350.0" styleClass="Anchorpane" stylesheets="@MainCSS.css" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <children>
+            <JFXPasswordField fx:id="PasswordtxtField" layoutX="50.0" layoutY="165.0" onAction="#onEnter" prefHeight="30.0" prefWidth="240.0" promptText="Password" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+            <JFXTextField fx:id="UsertxtField" layoutX="50.0" layoutY="94.0" prefHeight="30.0" prefWidth="240.0" text="Username" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+            <JFXButton fx:id="LoginButton" layoutX="108.0" layoutY="244.0" onAction="#LoginClicked" prefHeight="25.0" prefWidth="125.0" styleClass="buttons" stylesheets="@MainCSS.css" text="Log-In" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="107.0" />
+            <Label layoutX="123.0" layoutY="39.0" prefHeight="30.0" prefWidth="169.0" text="Attendance Login" AnchorPane.bottomAnchor="238.0" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="121.0" AnchorPane.topAnchor="39.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="nonoLabel" layoutX="87.0" layoutY="203.0" prefHeight="41.0" prefWidth="240.0" text="Username of Password incorrect" textFill="#da1212" visible="false">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fx:id="Logo" fitHeight="150.0" fitWidth="400.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="20.0">
+         <image>
+            <Image url="@images/ea-sydvest-logo.png" />
+         </image></ImageView>
+      <JFXButton fx:id="ExitButton" layoutX="184.0" layoutY="533.0" onAction="#Exit" styleClass="buttons" text="Exit" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="183.0" />
+   </children>
+</AnchorPane>

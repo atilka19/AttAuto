@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" styleClass="root" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attauto.GUI.Controller.StudentViewController">
+   <children>
+      <TableView fx:id="StudentTable" layoutX="336.0" layoutY="130.0" prefHeight="300.0" prefWidth="250.0" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0">
+        <columns>
+          <TableColumn prefWidth="125.0" text="Date" />
+          <TableColumn prefWidth="125.0" text="Status" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="Logo" fitHeight="150.0" fitWidth="350.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <image>
+            <Image url="@images/ea-sydvest-logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="LogOutButton" layoutX="481.0" layoutY="445.0" onAction="#LogOut" styleClass="buttons" text="Log-Out" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="130.0" prefHeight="25.0" prefWidth="105.0" styleClass="Label" text="Current Date:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="130.0" />
+      <Label layoutX="29.0" layoutY="173.0" styleClass="Label" text="Taken Classes over the Month:" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="260.0" layoutY="173.0" styleClass="Label" text="Label" />
+      <Label fx:id="CurrentDate" layoutX="135.0" layoutY="130.0" styleClass="Label" text="Label" />
+   </children>
+</AnchorPane>
