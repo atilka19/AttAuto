@@ -38,7 +38,7 @@ import javafx.stage.Stage;
 public class StudentViewController implements Initializable {
 
     @FXML
-    private TableView<?> StudentTable;
+    private TableView<Days> StudentTable;
     @FXML
     private ImageView Logo;
     @FXML
@@ -62,9 +62,9 @@ public class StudentViewController implements Initializable {
     @FXML
     private Label CommittedLabel;
     @FXML
-    private TableColumn<?, ?> CDate;
+    private TableColumn<Days, String> CDate;
     @FXML
-    private TableColumn<?, ?> CStatus;
+    private TableColumn<Days, String> CStatus;
     /**
      * Initializes the controller class.
      */
@@ -75,7 +75,7 @@ public class StudentViewController implements Initializable {
         try {
             loadDays();
         } catch (IOException ex) {
-            Logger.getLogger(TeacherViewController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentViewController.class.getName()).log(Level.SEVERE, null, ex);
         }
         CDate.setCellValueFactory(new PropertyValueFactory("date"));
         CStatus.setCellValueFactory(new PropertyValueFactory("status"));
@@ -123,7 +123,7 @@ public class StudentViewController implements Initializable {
         StudentTable.getItems().clear();
         for(Days day : Mmanager.getAllDay())
         {
-
+            StudentTable.getItems().add(day);
         }
     
 }
