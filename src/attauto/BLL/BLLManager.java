@@ -5,6 +5,7 @@
  */
 package attauto.BLL;
 
+import attauto.BE.Days;
 import attauto.BE.Students;
 import attauto.DB.DALManager;
 import java.io.IOException;
@@ -20,5 +21,10 @@ public class BLLManager
  public ObservableList<Students> getStudents() throws IOException
  {
      return manager.getStudents();
+ }
+ 
+  public ObservableList<Days> getAllDay() throws IOException
+ {
+     return manager.getAllDay();
  }
 }

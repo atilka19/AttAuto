@@ -5,6 +5,9 @@
  */
 package attauto.GUI.Controller;
 
+import attauto.BE.Days;
+import attauto.BE.Students;
+import attauto.model.ModelManager;
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.net.URL;
@@ -12,6 +15,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,7 +24,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -43,6 +50,7 @@ public class StudentViewController implements Initializable {
     Date DateM = new Date();
     DateFormat dateFormatterFull = new SimpleDateFormat("dd/MM/yyyy");
     DateFormat dateFormatterMonth = new SimpleDateFormat("MM");
+    ModelManager Mmanager = new ModelManager();
     private String[] months = new String [12];
     private int t;
     @FXML
@@ -53,6 +61,10 @@ public class StudentViewController implements Initializable {
     private Label CommitLabel;
     @FXML
     private Label CommittedLabel;
+    @FXML
+    private TableColumn<?, ?> CDate;
+    @FXML
+    private TableColumn<?, ?> CStatus;
     /**
      * Initializes the controller class.
      */
@@ -60,6 +72,13 @@ public class StudentViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         setDate();
         setMonths();
+        try {
+            loadDays();
+        } catch (IOException ex) {
+            Logger.getLogger(TeacherViewController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        CDate.setCellValueFactory(new PropertyValueFactory("date"));
+        CStatus.setCellValueFactory(new PropertyValueFactory("status"));
     }    
     private void setDate ()
     {
@@ -99,4 +118,13 @@ public class StudentViewController implements Initializable {
         months[11]="December";
         //monthsBox.setItems(months);
     }
+    
+        private void loadDays() throws IOException {
+        StudentTable.getItems().clear();
+        for(Days day : Mmanager.getAllDay())
+        {
+
+        }
+    
+}
 }

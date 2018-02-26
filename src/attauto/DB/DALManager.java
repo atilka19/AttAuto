@@ -6,6 +6,7 @@
 package attauto.DB;
 
 import attauto.BE.Students;
+import attauto.BE.Days;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -37,6 +38,24 @@ public class DALManager
         return student;
     }
     
+    
+        public ObservableList<Days> getAllDay() throws IOException
+    {
+        ObservableList<Days> day = FXCollections.observableArrayList();
+        try (BufferedReader br = new BufferedReader(new FileReader("MockDB/Days.csv")))
+    {
+        Scanner sc = new Scanner(br);
+        sc.nextLine();
+        while(sc.hasNext())
+        {
+            String line = sc.nextLine();
+            String[] fields = line.split(",");
+            Days days = new Days (fields[0],fields[1]);
+            day.add(days);
+        }
+    }
+        return day;
+    }
     
     
 }

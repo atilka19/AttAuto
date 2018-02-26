@@ -24,8 +24,8 @@
       </AnchorPane>
       <TableView fx:id="StudentTable" layoutX="336.0" layoutY="130.0" prefHeight="300.0" prefWidth="250.0" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0">
         <columns>
-          <TableColumn prefWidth="125.0" text="Date" />
-          <TableColumn prefWidth="125.0" text="Status" />
+          <TableColumn fx:id="CDate" prefWidth="125.0" text="Date" />
+          <TableColumn fx:id="CStatus" prefWidth="125.0" text="Status" />
         </columns>
       </TableView>
       <ImageView fx:id="Logo" fitHeight="150.0" fitWidth="350.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">

@@ -5,6 +5,7 @@
  */
 package attauto.model;
 
+import attauto.BE.Days;
 import attauto.BE.Students;
 import attauto.BLL.BLLManager;
 import java.io.IOException;
@@ -22,5 +23,11 @@ public class ModelManager {
     {
         return manager.getStudents();
     }
+    
+    public ObservableList<Days> getAllDay() throws IOException
+    {
+        return manager.getAllDay();
+    }
+    
     
 }
