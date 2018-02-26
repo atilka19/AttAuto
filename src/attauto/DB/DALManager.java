@@ -5,7 +5,7 @@
  */
 package attauto.DB;
 
-import attauto.BE.Days;
+import attauto.BE.Students;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -20,23 +20,25 @@ import javafx.collections.ObservableList;
  */
 public class DALManager 
 {
-    /*public ObservableList <Days> getDays(String days) throws FileNotFoundException, IOException
+    public ObservableList<Students> getStudents() throws IOException
     {
-        ObservableList <Days> days = FXCollections.observableArrayList();
-        try (BufferedReader br = new BufferedReader(new FileReader("MockDB/Days.csv")))
+        System.out.println("buta");
+        ObservableList<Students> student = FXCollections.observableArrayList();
+        try (BufferedReader br = new BufferedReader(new FileReader("MockDB/Students.csv")))
+    {
+        Scanner sc = new Scanner(br);
+        sc.nextLine();
+        while(sc.hasNext())
         {
-            Scanner scanner = new Scanner(br);
-            scanner.nextLine();
-            while (scanner.hasNext())
-            {
-                String line =scanner.nextLine();
-               String [] fields = line.split(",");
-               Days day = new Days(fields[0],fields[1]);
-               days.add(day);
-               
-            }
+            String line = sc.nextLine();
+            String[] fields = line.split(",");
+            Students students = new Students (fields[0],fields[1],fields[2],fields[3]);
+            student.add(students);
         }
-        return days;
-        
-    }*/
+    }
+        return student;
+    }
+    
+    
+    
 }
