@@ -119,10 +119,29 @@ public class StudentViewController implements Initializable {
         //monthsBox.setItems(months);
     }
     
+    private void ifAttendance(Days day)
+    {
+        if(day.getStatus().equals("FALSE"))
+            {
+                day.setStatus("Absent");
+                StudentTable.getItems().add(day);
+            }
+            else if(day.getStatus().equals("TRUE"))
+                    {
+                     day.setStatus("Present");
+                StudentTable.getItems().add(day);   
+                    }
+            else
+            {
+             StudentTable.getItems().add(day);   
+            }
+    }
+    
         private void loadDays() throws IOException {
         StudentTable.getItems().clear();
         for(Days day : Mmanager.getAllDay())
         {
+            ifAttendance(day);
             StudentTable.getItems().add(day);
         }
     
