@@ -1,4 +1,4 @@
-name, attendance, percentage, takenLessons, skippedDay, months
-Tomasz Plesniak,true,40 %,1/5,Thursday,T
-Marin Nikolov,true,30 %,1/5,Wednesday,M
-Michal Moravik,,54 %,2/5,Wednesday,Mi
+name, attendance, percentage, mostmissedday
+Tomasz Plesniak,TRUE,40%,Thursday
+Marin Nikolov,TRUE,30%,Wednesday
+Michal Moravik,,54%,Wednesday

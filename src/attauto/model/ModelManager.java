@@ -7,6 +7,7 @@ package attauto.model;
 
 import attauto.BE.Students;
 import attauto.BLL.BLLManager;
+import java.io.IOException;
 import javafx.collections.ObservableList;
 
 /**
@@ -17,7 +18,7 @@ public class ModelManager {
     
     private BLLManager manager = new BLLManager();
     
-    public ObservableList<Students> getStudents()
+    public ObservableList<Students> getStudents() throws IOException
     {
         return manager.getStudents();
     }

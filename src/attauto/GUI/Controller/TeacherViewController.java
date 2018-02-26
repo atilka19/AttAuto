@@ -50,12 +50,13 @@ public class TeacherViewController implements Initializable {
     @FXML
     private TableColumn<Students, String> PercCol;
     @FXML
-    private TableColumn<Students, String> AttendedDaysCol;
-
-    
+    private TableColumn<Students, String> MostMissedDayCol;
+        
+        
     ModelManager Mmanager = new ModelManager();
     Date Date = new Date();
     DateFormat dateFormatterFull = new SimpleDateFormat("dd/MM/yyyy");
+
 
 
     /**
@@ -72,16 +73,13 @@ public class TeacherViewController implements Initializable {
         NameCol.setCellValueFactory(new PropertyValueFactory("name"));
         AttendanceCol.setCellValueFactory(new PropertyValueFactory("attendance"));
         PercCol.setCellValueFactory(new PropertyValueFactory("percantage"));
-        AttendedDaysCol.setCellValueFactory(new PropertyValueFactory("attendedDays"));
+        MostMissedDayCol.setCellValueFactory(new PropertyValueFactory("mostmissedday"));
     }
     private void setDate ()
     {
              CurrentDate.setText(" "+dateFormatterFull.format(Date));
     }
-    private void Fill(Students students)
-    {
-        StudentTable.getItems().add(students);
-    }
+
     @FXML
     public void LogOut () throws IOException
     {
@@ -91,22 +89,17 @@ public class TeacherViewController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    /*private void loadStudents(Students student)
-    {
-        StudentTable.getItems().clear();
-        Mmanager.getStudents();
-        StudentTable.getItems().add(student);
-    }*/
+
     private void ifAttendance(Students student)
     {
-        if(student.getAttendance().equals("false"))
+        if(student.getAttendance().equals("FALSE"))
             {
-                student.setAttendance("absent");
+                student.setAttendance("Absent");
                 StudentTable.getItems().add(student);
             }
-            else if(student.getAttendance().equals("true"))
+            else if(student.getAttendance().equals("TRUE"))
                     {
-                     student.setAttendance("present");
+                     student.setAttendance("Present");
                 StudentTable.getItems().add(student);   
                     }
             else

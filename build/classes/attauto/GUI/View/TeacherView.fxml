@@ -15,7 +15,7 @@
           <TableColumn fx:id="NameCol" prefWidth="155.0" text="Student" />
           <TableColumn fx:id="AttendanceCol" prefWidth="131.0" text="Attendance" />
             <TableColumn fx:id="PercCol" prefWidth="128.0" text="Attendance %" />
-            <TableColumn fx:id="AttendedDaysCol" prefWidth="145.0" text="Attended Days" />
+            <TableColumn fx:id="MostMissedDayCol" prefWidth="145.0" text="Most missed Day" />
         </columns>
       </TableView>
       <ImageView fx:id="Logo" fitHeight="150.0" fitWidth="350.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">

@@ -7,7 +7,6 @@ package attauto.DB;
 
 import attauto.BE.Students;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -22,7 +21,6 @@ public class DALManager
 {
     public ObservableList<Students> getStudents() throws IOException
     {
-        System.out.println("buta");
         ObservableList<Students> student = FXCollections.observableArrayList();
         try (BufferedReader br = new BufferedReader(new FileReader("MockDB/Students.csv")))
     {

@@ -16,14 +16,14 @@ public class Students
     private String name;
     private String attendance;
     private String percantage;
-    private String attendedDays;
+    private String mostmissedday;
     
     
-    public Students(String name, String attendance, String percantage, String attendedDays) {
+    public Students(String name, String attendance, String percantage, String mostmissedday) {
         this.name = name;
         this.attendance = attendance;
         this.percantage = percantage;
-        this.attendedDays = attendedDays;
+        this.mostmissedday = mostmissedday;
     }
     
     public String getName() {
@@ -38,8 +38,8 @@ public class Students
         return percantage;
     }
 
-    public String getAttendedDays() {
-        return attendedDays;
+    public String getMostmissedday() {
+        return mostmissedday;
     }
 
     public void setName(String name) {
@@ -54,7 +54,7 @@ public class Students
         this.percantage = percantage;
     }
 
-    public void setAttendedDays(String attendedDays) {
-        this.attendedDays = attendedDays;
+    public void setMostmissedday(String mostmissedday) {
+        this.mostmissedday = mostmissedday;
     }
 }
