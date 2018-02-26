@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -10,6 +11,17 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" styleClass="root" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attauto.GUI.Controller.StudentViewController">
    <children>
+      <AnchorPane layoutX="20.0" layoutY="130.0" prefHeight="300.0" prefWidth="303.0" styleClass="Anchorpane" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="130.0">
+         <children>
+            <JFXButton fx:id="CommitButton" layoutX="71.0" layoutY="245.0" onAction="#Commit" styleClass="buttons" text="Commit Attendance" />
+            <Label fx:id="CommitLabel" layoutX="34.0" layoutY="200.0" prefWidth="242.0" styleClass="Label" text="Commit Today's Attendance:" />
+            <Label fx:id="CommittedLabel" layoutX="51.0" layoutY="128.0" styleClass="Label" text="Attendance Committed!" visible="false" />
+            <Label fx:id="CurrentDate" layoutX="111.0" styleClass="Label" text="Label" />
+            <Label prefHeight="45.0" prefWidth="125.0" styleClass="Label" text="Current Date:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label layoutY="45.0" styleClass="Label" text="Taken Classes over the Month:" AnchorPane.leftAnchor="0.0" />
+            <Label layoutX="239.0" layoutY="42.0" styleClass="Label" text="Label" />
+         </children>
+      </AnchorPane>
       <TableView fx:id="StudentTable" layoutX="336.0" layoutY="130.0" prefHeight="300.0" prefWidth="250.0" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="130.0">
         <columns>
           <TableColumn prefWidth="125.0" text="Date" />
@@ -22,9 +34,6 @@
          </image>
       </ImageView>
       <JFXButton fx:id="LogOutButton" layoutX="481.0" layoutY="445.0" onAction="#LogOut" styleClass="buttons" text="Log-Out" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <Label layoutX="20.0" layoutY="130.0" prefHeight="25.0" prefWidth="105.0" styleClass="Label" text="Current Date:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="130.0" />
-      <Label layoutX="29.0" layoutY="173.0" styleClass="Label" text="Taken Classes over the Month:" AnchorPane.leftAnchor="20.0" />
-      <Label layoutX="260.0" layoutY="173.0" styleClass="Label" text="Label" />
-      <Label fx:id="CurrentDate" layoutX="135.0" layoutY="130.0" styleClass="Label" text="Label" />
+      <ComboBox fx:id="monthsBox" layoutX="380.0" layoutY="90.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

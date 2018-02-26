@@ -13,8 +13,8 @@
    <children>
       <AnchorPane layoutX="57.0" layoutY="179.0" prefHeight="300.0" prefWidth="350.0" styleClass="Anchorpane" stylesheets="@MainCSS.css" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
          <children>
+            <JFXTextField fx:id="UsertxtField" layoutX="50.0" layoutY="94.0" prefHeight="30.0" prefWidth="240.0" promptText="Username" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
             <JFXPasswordField fx:id="PasswordtxtField" layoutX="50.0" layoutY="165.0" onAction="#onEnter" prefHeight="30.0" prefWidth="240.0" promptText="Password" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
-            <JFXTextField fx:id="UsertxtField" layoutX="50.0" layoutY="94.0" prefHeight="30.0" prefWidth="240.0" text="Username" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
             <JFXButton fx:id="LoginButton" layoutX="108.0" layoutY="244.0" onAction="#LoginClicked" prefHeight="25.0" prefWidth="125.0" styleClass="buttons" stylesheets="@MainCSS.css" text="Log-In" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="107.0" />
             <Label layoutX="123.0" layoutY="39.0" prefHeight="30.0" prefWidth="169.0" text="Attendance Login" AnchorPane.bottomAnchor="238.0" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="121.0" AnchorPane.topAnchor="39.0">
                <font>
