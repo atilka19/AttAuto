@@ -29,5 +29,15 @@ public class ModelManager {
         return manager.getAllDay();
     }
     
+    public void Present() throws IOException
+    {
+        manager.Present();
+    }
+    
+    public void Absent() throws IOException
+    {
+        manager.Absent();
+    }
+    
     
 }

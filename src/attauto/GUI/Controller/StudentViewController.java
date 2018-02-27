@@ -13,10 +13,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -46,6 +48,11 @@ public class StudentViewController implements Initializable {
     @FXML
     private JFXButton LogOutButton;
     
+    Calendar now = Calendar.getInstance();
+    int cDate = now.get(Calendar.DATE);
+    int cMonth = now.get(Calendar.MONTH) + 1;
+    int cYear = now.get(Calendar.YEAR);
+    String today = cMonth + "/" + cDate + "/" + cYear;
     Date DateF = new Date();
     Date DateM = new Date();
     DateFormat dateFormatterFull = new SimpleDateFormat("dd/MM/yyyy");
@@ -68,6 +75,7 @@ public class StudentViewController implements Initializable {
     /**
      * Initializes the controller class.
      */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setDate();
@@ -94,13 +102,27 @@ public class StudentViewController implements Initializable {
         stage.show();
     }
     @FXML
+      
+    
     public void Commit ()
     {
+        try {
+            Mmanager.Present();
+        } catch (IOException ex) {
+            Logger.getLogger(StudentViewController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            loadDays();
+        } catch (IOException ex) {
+            Logger.getLogger(StudentViewController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         CommittedLabel.setVisible(true);
         CommitLabel.setVisible(false);
         CommitButton.setVisible(false);
-        
     }
+    
+            
+            
     public void setMonths()
     {
         t =Integer.parseInt(dateFormatterMonth.format(DateM))-1;
@@ -119,29 +141,13 @@ public class StudentViewController implements Initializable {
         //monthsBox.setItems(months);
     }
     
-    private void ifAttendance(Days day)
-    {
-        if(day.getStatus().equals("FALSE"))
-            {
-                day.setStatus("Absent");
-                StudentTable.getItems().add(day);
-            }
-            else if(day.getStatus().equals("TRUE"))
-                    {
-                     day.setStatus("Present");
-                StudentTable.getItems().add(day);   
-                    }
-            else
-            {
-             StudentTable.getItems().add(day);   
-            }
-    }
+        
+    
     
         private void loadDays() throws IOException {
         StudentTable.getItems().clear();
         for(Days day : Mmanager.getAllDay())
         {
-            ifAttendance(day);
             StudentTable.getItems().add(day);
         }
     

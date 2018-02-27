@@ -90,28 +90,12 @@ public class TeacherViewController implements Initializable {
         stage.show();
     }
 
-    private void ifAttendance(Students student)
-    {
-        if(student.getAttendance().equals("FALSE"))
-            {
-                student.setAttendance("Absent");
-                StudentTable.getItems().add(student);
-            }
-            else if(student.getAttendance().equals("TRUE"))
-                    {
-                     student.setAttendance("Present");
-                StudentTable.getItems().add(student);   
-                    }
-            else
-            {
-             StudentTable.getItems().add(student);   
-            }
-    }
+
     private void loadStudents() throws IOException {
         StudentTable.getItems().clear();
         for(Students student : Mmanager.getStudents())
         {
-            ifAttendance(student);
+
         }
     
 }
