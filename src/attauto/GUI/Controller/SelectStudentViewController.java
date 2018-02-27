@@ -70,7 +70,6 @@ public class SelectStudentViewController implements Initializable {
         setName();
         loadDays();
         setPerc(id);
-        checkForSkippedDay(0);
     }
     public void setName() throws IOException
     {
@@ -107,41 +106,5 @@ public class SelectStudentViewController implements Initializable {
         }
         PercLabel.setText(""+(waspresent*100/allDays+" %"));
     }
-        private void setDaysInWeek()
-    {
-        Skip[0]="Monday";
-        Skip[1]="Tuesday";
-        Skip[2]="Wednesday";
-        Skip[3]="Thursday";
-        Skip[4]="Friday";
-        max=0;
-        for(int i=0;i<5;i++)
-        {
-            WeekDays[i]=0;
-        }
-    }
-      private void checkForSkippedDay(int dayNumber)
-    {
 
-        if(dayNumber==2)
-            WeekDays[0]++;
-        else if(dayNumber==3)
-            WeekDays[1]++;
-        else if(dayNumber==4)
-            WeekDays[2]++;
-        else if(dayNumber==5)
-            WeekDays[3]++;
-        else if(dayNumber==6)
-            WeekDays[4]++;
-
-        for (int i = 0; i < 5; i++)
-        {
-            if (WeekDays[i] > max)
-            {
-                max =WeekDays[i];
-            }
-        }
-        mostSkippedResult = Skip[max];
-        MostMissedLabel.setText(mostSkippedResult);
-    }
 }

@@ -6,25 +6,21 @@
 package attauto.GUI.Controller;
 
 import attauto.BE.Days;
-import attauto.BE.Students;
 import attauto.model.ModelManager;
 import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -51,10 +47,6 @@ public class StudentViewController implements Initializable {
     Date DateF = new Date();
     DateFormat dateFormatterFull = new SimpleDateFormat("dd/MM/yyyy");
     ModelManager Mmanager = new ModelManager();
-    private String[] months = new String [12];
-    private int t;
-    @FXML
-    private ComboBox<?> monthsBox;
     @FXML
     private JFXButton CommitButton;
     @FXML
@@ -71,7 +63,6 @@ public class StudentViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setDate();
-        checkdate();
         try {
             loadDays();
         } catch (IOException ex) {
@@ -85,7 +76,7 @@ public class StudentViewController implements Initializable {
              CurrentDate.setText(" "+dateFormatterFull.format(DateF));
     }
     @FXML
-    public void LogOut () throws IOException
+    public void LogOut () throws IOException //Actionhandler, handles the logout button
     {
         Parent root = FXMLLoader.load(getClass().getResource("/attauto/GUI/View/Login.fxml"));
         Scene scene = new Scene(root);
@@ -94,7 +85,7 @@ public class StudentViewController implements Initializable {
         stage.show();
     }
     @FXML
-    public void Commit ()
+    public void Commit () //Actionhandler, handles the commit attendance button
     {
         try {
             Mmanager.Present();
@@ -111,7 +102,7 @@ public class StudentViewController implements Initializable {
         CommitButton.setVisible(false);
         
     }    
-    private void loadDays() throws IOException 
+    private void loadDays() throws IOException //getting table from model load into tableview
     {
         StudentTable.getItems().clear();
         for(Days day : Mmanager.getAllDay())
@@ -120,9 +111,5 @@ public class StudentViewController implements Initializable {
         }
     
     }
-    private void checkdate ()
-    {
-        Date today = DateF;
-        System.out.println(today);
-    }
+
 }

@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/GUI/Controller/SelectStudentViewController.java</file>
             <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/GUI/Controller/StudentViewController.java</file>
-            <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/GUI/Controller/TeacherViewController.java</file>
+            <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/GUI/View/StudentView.fxml</file>
+            <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/DB/DALManager.java</file>
+            <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/AttAuto.java</file>
         </group>
     </open-files>
 </project-private>

@@ -14,15 +14,14 @@
           <TableColumn fx:id="StatusCol" prefWidth="278.0" text="Status" />
         </columns>
       </TableView>
-      <AnchorPane layoutX="230.0" layoutY="11.0" prefHeight="107.0" prefWidth="560.0" styleClass="Anchorpane" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <AnchorPane layoutX="20.0" layoutY="81.0" prefHeight="45.0" prefWidth="382.0" styleClass="Anchorpane" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="81.0">
          <children>
-            <Label fx:id="NameLabel" layoutX="248.0" layoutY="7.0" styleClass="Label" text="Name" />
-            <Label layoutX="14.0" layoutY="51.0" styleClass="Label" text="Most Missed Day:" />
-            <Label fx:id="MostMissedLabel" layoutX="168.0" layoutY="52.0" styleClass="Label" text="Label" />
-            <Label layoutX="313.0" layoutY="52.0" styleClass="Label" text="Percantage:" />
-            <Label fx:id="PercLabel" layoutX="433.0" layoutY="52.0" styleClass="Label" text="Label" />
+            <Label styleClass="Label" text="Percantage over this months classes:" />
+            <Label fx:id="PercLabel" layoutX="280.0" styleClass="Label" text="Label" />
          </children>
       </AnchorPane>
       <JFXButton fx:id="CloseButton" layoutX="508.0" layoutY="347.0" onAction="#close" styleClass="buttons" text="Close" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <AnchorPane layoutX="20.0" layoutY="22.0" prefHeight="45.0" prefWidth="201.0" styleClass="Anchorpane" />
+      <Label fx:id="NameLabel" layoutX="20.0" layoutY="22.0" styleClass="Label" text="Name" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="22.0" />
    </children>
 </AnchorPane>

@@ -10,7 +10,13 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" styleClass="root" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attauto.GUI.Controller.TeacherViewController">
    <children>
-      <TableView fx:id="StudentTable" layoutX="336.0" layoutY="170.0" onMouseClicked="#StudentClick" prefHeight="260.0" prefWidth="360.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
+      <AnchorPane layoutX="20.0" layoutY="117.0" prefHeight="47.0" prefWidth="219.0" styleClass="Anchorpane">
+         <children>
+            <Label layoutY="2.0" prefHeight="45.0" prefWidth="122.0" styleClass="Label" text="Current Date:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="2.0" />
+            <Label fx:id="CurrentDate" layoutX="103.0" layoutY="2.0" styleClass="Label" text="Label" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="StudentTable" layoutX="336.0" layoutY="170.0" onMouseClicked="#StudentClick" prefHeight="260.0" prefWidth="360.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
         <columns>
           <TableColumn fx:id="NameCol" prefWidth="155.0" text="Student" />
           <TableColumn fx:id="AttendanceCol" prefWidth="131.0" text="Attendance" />
@@ -24,7 +30,5 @@
          </image>
       </ImageView>
       <JFXButton fx:id="LogOutButton" layoutX="481.0" layoutY="445.0" onAction="#LogOut" styleClass="buttons" text="Log-Out" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-      <Label layoutX="-9.0" layoutY="108.0" prefHeight="45.0" prefWidth="136.0" styleClass="Label" text="Current Date:" AnchorPane.leftAnchor="-9.0" AnchorPane.topAnchor="108.0" />
-      <Label fx:id="CurrentDate" layoutX="110.0" layoutY="108.0" styleClass="Label" text="Label" />
    </children>
 </AnchorPane>
