@@ -31,4 +31,14 @@ public class BLLManager
   {
       return manager.getDays(id);
   }
+  
+  public void Present() throws IOException
+  {
+      manager.Present();
+  }
+  
+  public void Absent() throws IOException
+  {
+      manager.Absent();
+  }
 }

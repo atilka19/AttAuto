@@ -10,7 +10,9 @@ import attauto.BE.Days;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Scanner;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,6 +23,13 @@ import javafx.collections.ObservableList;
  */
 public class DALManager 
 {
+    
+    Calendar now = Calendar.getInstance();
+    int cDate = now.get(Calendar.DATE);
+    int cMonth = now.get(Calendar.MONTH) + 1;
+    int cYear = now.get(Calendar.YEAR);
+    String today = cMonth + "/" + cDate + "/" + cYear;
+    
     public ObservableList<Students> getStudents() throws IOException
     {
         ObservableList<Students> student = FXCollections.observableArrayList();
@@ -74,6 +83,36 @@ public class DALManager
             }
             return day;
         }
+
+    public void Present() throws IOException {
+    try
+        {
+            String filename= "MockDB/Days.csv";
+            FileWriter fw = new FileWriter(filename,true);
+            fw.write("\n"+today+",Present");
+            fw.close();
+        }
+        catch(IOException ioe)
+        {
+            System.err.println("IOException: " + ioe.getMessage());
+        }
     
+    
+    }
+    
+    public void Absent() throws IOException {
+    try
+        {
+            String filename= "MockDB/Days.csv";
+            FileWriter fw = new FileWriter(filename,true);
+            fw.write("\n"+today+",Absent");
+            fw.close();
+        }
+    catch(IOException ioe)
+        {
+            System.err.println("IOException: " + ioe.getMessage());
+        }
+    
+    }
     
 }
