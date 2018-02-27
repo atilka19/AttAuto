@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attauto.GUI.Controller.SelectStudentViewController">
+   <children>
+      <TableView fx:id="StudentTable" layoutX="20.0" layoutY="127.0" prefHeight="193.0" prefWidth="560.0" AnchorPane.bottomAnchor="73.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <columns>
+          <TableColumn fx:id="DateCol" prefWidth="281.0" text="Date" />
+          <TableColumn fx:id="StatusCol" prefWidth="278.0" text="Status" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="230.0" layoutY="11.0" prefHeight="107.0" prefWidth="560.0" styleClass="Anchorpane" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label fx:id="NameLabel" layoutX="248.0" layoutY="7.0" styleClass="Label" text="Name" />
+            <Label layoutX="14.0" layoutY="51.0" styleClass="Label" text="Most Missed Day:" />
+            <Label fx:id="MostMissedLabel" layoutX="168.0" layoutY="52.0" styleClass="Label" text="Label" />
+            <Label layoutX="313.0" layoutY="52.0" styleClass="Label" text="Percantage:" />
+            <Label fx:id="PercLabel" layoutX="433.0" layoutY="52.0" styleClass="Label" text="Label" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="CloseButton" layoutX="508.0" layoutY="347.0" onAction="#close" styleClass="buttons" text="Close" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

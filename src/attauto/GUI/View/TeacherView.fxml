@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" styleClass="root" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attauto.GUI.Controller.TeacherViewController">
    <children>
-      <TableView fx:id="StudentTable" layoutX="336.0" layoutY="170.0" prefHeight="260.0" prefWidth="360.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
+      <TableView fx:id="StudentTable" layoutX="336.0" layoutY="170.0" onMouseClicked="#StudentClick" prefHeight="260.0" prefWidth="360.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
         <columns>
           <TableColumn fx:id="NameCol" prefWidth="155.0" text="Student" />
           <TableColumn fx:id="AttendanceCol" prefWidth="131.0" text="Attendance" />

@@ -47,9 +47,7 @@ public class StudentViewController implements Initializable {
     private JFXButton LogOutButton;
     
     Date DateF = new Date();
-    Date DateM = new Date();
     DateFormat dateFormatterFull = new SimpleDateFormat("dd/MM/yyyy");
-    DateFormat dateFormatterMonth = new SimpleDateFormat("MM");
     ModelManager Mmanager = new ModelManager();
     private String[] months = new String [12];
     private int t;
@@ -71,7 +69,7 @@ public class StudentViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         setDate();
-        setMonths();
+        checkdate();
         try {
             loadDays();
         } catch (IOException ex) {
@@ -100,31 +98,19 @@ public class StudentViewController implements Initializable {
         CommitLabel.setVisible(false);
         CommitButton.setVisible(false);
         
-    }
-    public void setMonths()
+    }    
+    private void loadDays() throws IOException 
     {
-        t =Integer.parseInt(dateFormatterMonth.format(DateM))-1;
-        months[0]="January";
-        months[1]="February";
-        months[2]="March";
-        months[3]="April";
-        months[4]="May";
-        months[5]="June";
-        months[6]="July";
-        months[7]="August";
-        months[8]="September";
-        months[9]="October";
-        months[10]="November";
-        months[11]="December";
-        //monthsBox.setItems(months);
-    }
-    
-        private void loadDays() throws IOException {
         StudentTable.getItems().clear();
         for(Days day : Mmanager.getAllDay())
         {
             StudentTable.getItems().add(day);
         }
     
-}
+    }
+    private void checkdate ()
+    {
+        Date today = DateF;
+        System.out.println(today);
+    }
 }

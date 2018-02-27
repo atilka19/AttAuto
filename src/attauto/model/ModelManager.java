@@ -28,6 +28,10 @@ public class ModelManager {
     {
         return manager.getAllDay();
     }
+    public ObservableList<Days> getDays(String id) throws IOException
+    {
+        return manager.getDays(id);
+    }
     
     
 }

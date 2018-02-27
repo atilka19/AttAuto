@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -26,6 +27,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
@@ -88,6 +90,23 @@ public class TeacherViewController implements Initializable {
         Stage stage = (Stage) LogOutButton.getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    public void StudentClick(MouseEvent event) throws IOException
+    {
+        Students selectedStudent = StudentTable.getSelectionModel().getSelectedItem();
+        if (event.getClickCount() == 2 && !event.isConsumed() && selectedStudent!=null)
+        {
+            Parent root;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/attauto/GUI/View/SelectStudentView.fxml"));
+            root = loader.load();
+            SelectStudentViewController controller = loader.getController();
+            controller.setID(selectedStudent.getID());
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     private void ifAttendance(Students student)

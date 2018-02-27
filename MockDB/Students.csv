@@ -1,4 +1,3 @@
-name, attendance, percentage, mostmissedday
-Attila Reiner,TRUE,40%,Thursday
-Viktor Hart,TRUE,30%,Wednesday
-,,,
+name, attendance, percentage, mostmissedday,ID
+Attila Reiner,TRUE,40%,Thursday,AR
+Viktor Hart,TRUE,30%,Wednesday,VH
