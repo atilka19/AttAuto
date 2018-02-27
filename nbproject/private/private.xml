@@ -3,9 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/GUI/Controller/StudentViewController.java</file>
-            <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/DB/DALManager.java</file>
-            <file>file:/C:/Users/atilk/Desktop/Oskola/Github%20Repo's/AttAuto/src/attauto/BE/Days.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/GUI/Controller/TeacherViewController.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/BE/Students.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/BLL/BLLManager.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/BE/Days.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/GUI/View/StudentView.fxml</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/AttAuto.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/model/ModelManager.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/GUI/Controller/StudentViewController.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/GUI/Controller/LoginController.java</file>
+            <file>file:/C:/Users/dethe/Documents/GitHub/AttAuto/src/attauto/DB/DALManager.java</file>
         </group>
     </open-files>
 </project-private>
